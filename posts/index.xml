@@ -1,51 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Posts on 7QIW Site</title>
-    <link>https://7qiw.github.io/posts/</link>
-    <description>Recent content in Posts on 7QIW Site</description>
-    <generator>Hugo -- 0.147.8</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 13 Jun 2025 13:48:19 +0800</lastBuildDate>
-    <atom:link href="https://7qiw.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>利用 GitHub Pages 和 Hugo 轻松搭建个人博客</title>
-      <link>https://7qiw.github.io/posts/my-first-post/</link>
-      <pubDate>Fri, 13 Jun 2025 13:48:19 +0800</pubDate>
-      <guid>https://7qiw.github.io/posts/my-first-post/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;转自：https://zhuanlan.zhihu.com/p/57361697&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;
-&lt;h2 id=&#34;1-新建自己的github仓库&#34;&gt;1. 新建自己的github仓库&lt;/h2&gt;
-&lt;h2 id=&#34;2-安装hugo&#34;&gt;2. 安装Hugo&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;参考链接：https://gohugo.io/installation/&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;我这里使用Scoop安装：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bat&#34; data-lang=&#34;bat&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;3-新建一个hugo网站&#34;&gt;3. 新建一个Hugo网站&lt;/h2&gt;
-&lt;p&gt;在你想存放Hugo网站文件夹的目录中打开终端，执行以下指令：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo new site lilian-blog  &lt;span style=&#34;color:#75715e&#34;&gt;# &amp;#34;lilian-blog&amp;#34; 是我的网站文件夹名。 &lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;4-选择一个主题并克隆到本地&#34;&gt;4. 选择一个主题并克隆到本地&lt;/h2&gt;
-&lt;h3 id=&#34;41-打开-hugo-themes-页面选择一个你喜欢的主题&#34;&gt;4.1 打开 Hugo Themes 页面，选择一个你喜欢的主题。&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Hugo Themes: &lt;a href=&#34;https://themes.gohugo.io&#34;&gt;https://themes.gohugo.io&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
-&lt;h3 id=&#34;42-将所选主题克隆至本地目录&#34;&gt;4.2 将所选主题克隆至本地目录。&lt;/h3&gt;
-&lt;p&gt;在网站根目录执行以下命令下载主题并初始化为 Git 子模块：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git clone https://github.com/adityatelange/hugo-PaperMod themes/PaperMod --depth&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git init
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git submodule--helper add https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod --depth&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;43-编辑配置文件&#34;&gt;4.3 编辑配置文件&lt;/h3&gt;
-&lt;p&gt;打开根目录下的配置文件&lt;code&gt;hugo.toml&lt;/code&gt;，在文件中添加一行：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;theme &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;PaperMod&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# 注意，theme 配置项指的是所选主题的名称，必须与所选主题被克隆至的目录名相同&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;5-新建一篇文章&#34;&gt;5. 新建一篇文章&lt;/h2&gt;
-&lt;p&gt;在根目录中执行：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo new posts/my-first-post.md
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这时会在&lt;code&gt;content&lt;/code&gt;目录下生成&lt;code&gt;posts/my-first-post.md&lt;/code&gt;，编辑新建的文章，添加自己需要的内容。&lt;/p&gt;
-&lt;h2 id=&#34;6-本地预览网页效果&#34;&gt;6. 本地预览网页效果&lt;/h2&gt;
-&lt;h3 id=&#34;61-启动-hugo-server&#34;&gt;6.1 启动 Hugo server&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;hugo server -D
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;62-在网页中预览&#34;&gt;6.2 在网页中预览&lt;/h3&gt;
-&lt;p&gt;网页中访问： http://localhost:1313/，查看效果。&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on 7QIW Site</title><link>https://7qiw.github.io/posts/</link><description>Recent content in Posts on 7QIW Site</description><generator>Hugo -- 0.147.8</generator><language>en-us</language><lastBuildDate>Fri, 13 Jun 2025 13:48:19 +0800</lastBuildDate><atom:link href="https://7qiw.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>利用 GitHub Pages 和 Hugo 轻松搭建个人博客</title><link>https://7qiw.github.io/posts/my-first-post/</link><pubDate>Fri, 13 Jun 2025 13:48:19 +0800</pubDate><guid>https://7qiw.github.io/posts/my-first-post/</guid><description>&lt;blockquote>
+&lt;p>&lt;strong>转自：https://zhuanlan.zhihu.com/p/57361697&lt;/strong>&lt;/p>&lt;/blockquote>
+&lt;h2 id="1-新建自己的github仓库">1. 新建自己的github仓库&lt;/h2>
+&lt;h2 id="2-安装hugo">2. 安装Hugo&lt;/h2>
+&lt;blockquote>
+&lt;p>参考链接：https://gohugo.io/installation/&lt;/p>&lt;/blockquote>
+&lt;p>我这里使用Scoop安装：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bat" data-lang="bat">&lt;span style="display:flex;">&lt;span>Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="3-新建一个hugo网站">3. 新建一个Hugo网站&lt;/h2>
+&lt;p>在你想存放Hugo网站文件夹的目录中打开终端，执行以下指令：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>hugo new site lilian-blog &lt;span style="color:#75715e"># &amp;#34;lilian-blog&amp;#34; 是我的网站文件夹名。 &lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="4-选择一个主题并克隆到本地">4. 选择一个主题并克隆到本地&lt;/h2>
+&lt;h3 id="41-打开-hugo-themes-页面选择一个你喜欢的主题">4.1 打开 Hugo Themes 页面，选择一个你喜欢的主题。&lt;/h3>
+&lt;blockquote>
+&lt;p>Hugo Themes: &lt;a href="https://themes.gohugo.io">https://themes.gohugo.io&lt;/a>&lt;/p>&lt;/blockquote>
+&lt;h3 id="42-将所选主题克隆至本地目录">4.2 将所选主题克隆至本地目录。&lt;/h3>
+&lt;p>在网站根目录执行以下命令下载主题并初始化为 Git 子模块：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git clone https://github.com/adityatelange/hugo-PaperMod themes/PaperMod --depth&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#ae81ff">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git init
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git submodule--helper add https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod --depth&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#ae81ff">1&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="43-编辑配置文件">4.3 编辑配置文件&lt;/h3>
+&lt;p>打开根目录下的配置文件&lt;code>hugo.toml&lt;/code>，在文件中添加一行：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>theme &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;PaperMod&amp;#34;&lt;/span> &lt;span style="color:#75715e"># 注意，theme 配置项指的是所选主题的名称，必须与所选主题被克隆至的目录名相同&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="5-新建一篇文章">5. 新建一篇文章&lt;/h2>
+&lt;p>在根目录中执行：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>hugo new posts/my-first-post.md
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>这时会在&lt;code>content&lt;/code>目录下生成&lt;code>posts/my-first-post.md&lt;/code>，编辑新建的文章，添加自己需要的内容。&lt;/p>
+&lt;h2 id="6-本地预览网页效果">6. 本地预览网页效果&lt;/h2>
+&lt;h3 id="61-启动-hugo-server">6.1 启动 Hugo server&lt;/h3>
+&lt;pre tabindex="0">&lt;code>hugo server -D
+&lt;/code>&lt;/pre>&lt;h3 id="62-在网页中预览">6.2 在网页中预览&lt;/h3>
+&lt;p>网页中访问： http://localhost:1313/，查看效果。&lt;/p></description></item></channel></rss>
