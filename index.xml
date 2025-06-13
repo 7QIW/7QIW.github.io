@@ -41,7 +41,7 @@
 &lt;p&gt;在根目录中执行：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo new posts/my-first-post.md
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这时会在&lt;code&gt;content&lt;/code&gt;目录下生成&lt;code&gt;posts/my-first-post.md&lt;/code&gt;，编辑新建的文章，添加自己需要的内容。&lt;/p&gt;
-&lt;h3 id=&#34;6-本地预览网页效果&#34;&gt;6. 本地预览网页效果&lt;/h3&gt;
+&lt;h2 id=&#34;6-本地预览网页效果&#34;&gt;6. 本地预览网页效果&lt;/h2&gt;
 &lt;h3 id=&#34;61-启动-hugo-server&#34;&gt;6.1 启动 Hugo server&lt;/h3&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;hugo server -D
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;62-在网页中预览&#34;&gt;6.2 在网页中预览&lt;/h3&gt;
